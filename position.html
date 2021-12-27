@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>position</title>
+        <style>
+            .outer{
+                width: 200px;
+                height: 200px;
+                margin-bottom: 20px;
+                background-color: green;
+            }
+            .box{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+            .inner{
+                width: 100%;
+                height: 50%;
+            }
+            .inner1{
+                background-color: blue;
+            }
+            .inner2{
+                background-color: yellow;
+            }
+            .box1 .inner1{
+                /*position: static;*/
+                /*static is 기본값, 원래 있어야 하는 그 자리에 있는거라,변동 없음*/
+                position: relative;
+                /*원래 있던 그 자리를 유지 하면서, 거기에서 지정한 위치만큼 움직임.*/
+                top: 30px;
+                left: 100px;
+            }
+            .box .inner2{
+                /*position: static;*/
+                position: absolute;
+                top: 30px;
+                left: 100px;
+            /*    yellow box 가 static이 아닌 가장 근접한 부모를 찾아,
+             그 부모를 기준으로 우리가 지정한 값만큼 움직임.*/
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="outer">
+            <div class="box box1">
+                <div class="inner inner1">inner1</div>
+                <div class="inner inner2">inner2</div>
+            </div>
+        </div>
+
+        <div class="outer">
+            <div class="box box2">
+                <div class="inner inner1">inner1</div>
+                <div class="inner inner2">inner2</div>
+            </div>
+        </div>
+    </body>
+</html>
