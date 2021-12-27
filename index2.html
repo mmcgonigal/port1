@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            .box{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+            .inner{
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+            }
+            .box2{
+                padding: 20px;
+                border: 10px solid black;
+                box-sizing: content-box;
+            /*    그냥 컨텐츠만 컨텐츠 사이즈가 되게 하는거 100x100*/
+            }
+            .box3{
+                padding: 20px;
+                box-sizing: border-box;
+                /*컨텐츠와 패딩 볼더를 다 포함해서, 100x 100 이 된다. */
+                border: 10px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Box without padding</h3>
+        <div class="box box1">
+            <div class="inner"></div>
+        </div>
+
+        <h3>Box with padding</h3>
+        <div class="box box2">
+            <div class="inner"></div>
+        </div>
+
+        <h3>Box with padding, border-box</h3>
+        <div class="box box3">
+            <div class="inner"></div>
+        </div>
+    </body>
+</html>
