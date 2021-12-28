@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>alignment</title>
+        <style>
+            .box{
+                background-color: beige;
+                width: 200px;
+                height: 100px;
+            }
+            .inner{
+                background-color: blue;
+                width: 50%;
+                height: 50%;
+            }
+            .inner1{
+                margin: auto;
+            }
+            .box2{
+                /*text-align: center;*/
+            /*    div is block level so it wont work.
+            but if it was button, it would have worked.*/
+                text-align: center;
+            }
+            .inner3{
+                transform: translate(50%, 50%)
+            /*    margin: auto 와  text-align: center
+            은 수평이동은 되지만, 수직 이동이 안됨.
+            이떄 쓰는게, transform: translate(x%,y%) x축에서
+            x%만큼 이동. y축에서 y%만큼 이동.*/
+            }
+            .box4 h1{
+                text-align: center;
+                line-height: 100px;
+            /*    line-height 을 부모 상자와 동일하게 만들면 됨.
+             다만 문제는 텍스트가 두 줄일떄는 적용이 안됨.*/
+            }
+        </style>
+    </head>
+    <body>
+        <h3>margin: auto</h3>
+        <div class="box box1">
+            <div class="inner inner1"></div>
+        </div>
+        <h3>text-align: center</h3>
+        <div class="box box2">
+            <button>Text here</button>
+        </div>
+        <h3>translate(50%, 50%)</h3>
+        <div class="box box3">
+            <div class="inner inner3"></div>
+        </div>
+        <h3>Text centering</h3>
+        <div class="box box4">
+            <h1>text</h1>
+        </div>
+    </body>
+</html>
