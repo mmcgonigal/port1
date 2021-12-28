@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Transform</title>
+        <style>
+            .box{
+                width: 100px;
+                height: 120px;
+                background-color: brown;
+                margin-bottom: 20px;
+            }
+            .box1{
+                transform: translateX(100px);
+            }
+            .box2{
+                transform: translate(50px, -20px)
+            /*    x value : horizontal  y value : vertical */
+            /*    x값은 올라갈수록, 오른쪽으로 움직임.*/
+            /*    y값은 올라갈 수록 아래로 내려감 */
+            }
+            .box3{
+                transform: scale(1.2)
+            /*    1.2 배 정도로 커짐.*/
+            }
+            .box4{
+                transform: rotate(45deg)
+            /*    45도 기울은 모양으로 바뀜*/
+            }
+            .box5{
+                transform: translate(100px, 100px) scale(2) rotate(45deg);
+            /*    한꺼번에 사용 가능.*/
+
+            }
+        </style>
+    </head>
+    <body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+
+    </body>
+</html>
