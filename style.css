@@ -1,0 +1,26 @@
+/*global*/
+:root{
+/*    color*/
+    --color-dark-pink: #ff6863;
+    --color-dark-grey: #4d4d4d;
+    --color-light-grey: #7c7979;
+    --color-grey: #616161;
+    --color-blue: #73aace;
+    --color-yellow: #fff7d1;
+    --color-black: #000000;
+    --color-orange: #feb546;
+/*    font size*/
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 16px;
+    --font-micro: 14px;
+/*    font weight*/
+    --weight-bold: 700;
+    --weight-semi-bold: 500;
+    --weight-regular: 400;
+/*    size */
+/*    Universal tag*/
+    box-sizing: border-box
+/*  even if i add padding, width and height of box will be same size.    */
+}
