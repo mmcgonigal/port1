@@ -1,6 +1,6 @@
 /*global*/
-:root{
-/*    color*/
+:root {
+    /*    color*/
     --color-dark-pink: #ff6863;
     --color-dark-grey: #4d4d4d;
     --color-light-grey: #7c7979;
@@ -9,18 +9,48 @@
     --color-yellow: #fff7d1;
     --color-black: #000000;
     --color-orange: #feb546;
-/*    font size*/
+    /*    font size*/
     --font-large: 48px;
     --font-medium: 28px;
     --font-regular: 18px;
     --font-small: 16px;
     --font-micro: 14px;
-/*    font weight*/
+    /*    font weight*/
     --weight-bold: 700;
     --weight-semi-bold: 500;
     --weight-regular: 400;
-/*    size */
-/*    Universal tag*/
+    /*    size */
+    /*    Universal tag*/
     box-sizing: border-box
-/*  even if i add padding, width and height of box will be same size.    */
+    /*  even if i add padding, width and height of box will be same size.    */
 }
+/*Typography*/
+h1{
+    font-size: var(--font-large);
+    font-weight: var(--weight-bold);
+    color: var(--color-black);
+    margin: 16px 0px;
+}
+
+h2{
+    font-size: var(--font-regular);
+    font-weight: var(--weight-semi-bold);
+    color: var(--color-black);
+    margin: 8px 0;
+}
+
+h3{
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 8px 0;
+}
+
+p{
+    font-size: var(--font-regular);
+    font-weight: var(--weight-regular);
+    color: var(--color-black);
+    margin: 4px 0;
+}
+
+
