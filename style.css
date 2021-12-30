@@ -1,7 +1,7 @@
 /*global*/
 :root {
     /*    color*/
-    --color-dark-pink: #ff6863;
+    --color-pink: #FF85B1;
     --color-dark-grey: #4d4d4d;
     --color-light-grey: #7c7979;
     --color-grey: #616161;
@@ -39,7 +39,12 @@ a{
 ul{
     list-style: none;
     padding-left: 0;
-
+}
+button{
+    background-color:transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
 }
 /*Typography*/
 h1{
@@ -74,7 +79,7 @@ p{
 #navbar{
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-dark-pink);
+    background-color: var(--color-pink);
     align-items: center;
 }
 .leftNav{
@@ -99,5 +104,33 @@ p{
 /*}*/
 
 
+/*Home*/
+#home{
+    background-image: url("imgs/background2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 40px;
+    text-align: center;
+}
+.home_avatar{
+    border-radius: 10%;
+    width: 250px;
+    height: 250px;
+    border: 2px solid #00C9A8;
+}
+.intro, .intro-detail{
+    /*color: #EEEDFF*/
+    color: var(--color-white);
+}
+.home__contact{
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid #BFFBFF;
+    border-radius: 25%
+
+}
 
 
