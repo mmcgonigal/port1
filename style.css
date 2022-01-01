@@ -129,8 +129,36 @@ p{
     margin: 24px;
     padding: 8px 12px;
     border: 2px solid #BFFBFF;
-    border-radius: 25%
-
+    border-radius: 25%;
 }
+
+/*section common*/
+.section{
+    padding: 50px;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+/*max-width 를 1200 으로 맞췄을떄, text align 을 해도 한쪽으로 기울어 있는데,
+그건 마진이 오른쪽에만 있어서 그런거임, 이럴땐, margin: auto 를 해주면 마진이 양쪽으로
+분배가 되서, 컨텐츠가 한 가운데로 옴*/
+}
+.aboutMe-lists{
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
+
+.aboutMe-img{
+    width: 170px;
+    height: 170px;
+    line-height: 170px;
+    /*line-height 을 높이만큼 지정 해 주면, 컨텐츠가, 그 백그라운드의 한 중간에 옴*/
+    font-size: 70px;
+    /*background-color: yellow;*/
+    /*아이콘을 디자인 할때는 이렇게 임의로 백그라운드를 지정하면 훨씬 쉽게 디자인 가능,*/
+    margin: auto;
+    border: solid 1px var(--color-blue);
+    border-radius: 50%;
+    }
 
 
