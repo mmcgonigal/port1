@@ -154,11 +154,53 @@ p{
     line-height: 170px;
     /*line-height 을 높이만큼 지정 해 주면, 컨텐츠가, 그 백그라운드의 한 중간에 옴*/
     font-size: 70px;
+    color: var(--color-blue);
+    /*icon은 폰트와 같이 treat 되므로, 폰트 사이즈와 칼라로, 사이즈나 칼라 조정,*/
     /*background-color: yellow;*/
     /*아이콘을 디자인 할때는 이렇게 임의로 백그라운드를 지정하면 훨씬 쉽게 디자인 가능,*/
     margin: auto;
     border: solid 1px var(--color-blue);
     border-radius: 50%;
     }
+.aboutMe-img:hover i{
+    /*hover 만 하면 보더랑 전체가 다 영향받지만, i 을 넣어 줌으로써, 마우스가 i
+    에 갔을떄만 적용 됨*/
+    /*만약 .aboutMe-img i: hover   로 하면, 마우스 커서가 그 아이콘에 닿아야만이
+    트랜스폼이 되는데. 그걸 원하는게 아니라, 우리는 보더 안에 가면 바로, 바뀌게끔 하는것.*/
+    color: var(--color-pink);
+    transform: scale(1.5) rotate(-30deg);
+/*    transform 은 scale 은1.5배 정도 크게 바뀜, 그리고 rotate 왼쪽으로 30도 정도 돔*/
+}
+.aboutMe-img i{
+    transition: all 300ms ease;
+/*  모든 속성값에 , 250ms ~ 350ms 이 가장 좋은 타이밍,   */
+}
+
+.aboutMe-list-title, .aboutMe-list-description{
+    color: var(--color-dark-grey);
+}
+.aboutMe-list-description{
+    font-size: var(--font-small)
+}
+.aboutMe-school{
+    display: flex;
+    align-items: center;
+}
+
+.aboutMe-school-info{
+    margin: 0 16px;
+    text-align: center;
+}
+.aboutMe-school-detail, .aboutMe-school-date{
+    color: var(--color-dark-grey);
+}
+.aboutMe-school-detail{
+    font-size: var(--font-small);
+}
+.aboutMe-school-date{
+    font-size: var(--font-micro);
+}
+
+
 
 
