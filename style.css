@@ -8,6 +8,7 @@
     --color-light-grey: #7c7979;
     --color-grey: #616161;
     --color-blue: #73aace;
+    --color-light-blue:#bffbff;
     --color-yellow: #fff7d1;
     --color-black: #000000;
     --color-orange: #feb546;
@@ -60,7 +61,7 @@ h1{
 }
 
 h2{
-    font-size: var(--font-regular);
+    font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
     color: var(--color-black);
     margin: 8px 0;
@@ -133,7 +134,7 @@ p{
     font-weight: var(--weight-bold);
     margin: 24px;
     padding: 8px 12px;
-    border: 2px solid #BFFBFF;
+    border: 2px solid var(--color-light-blue);
     border-radius: 25%;
 }
 
@@ -374,4 +375,60 @@ relative 로 바꿔 줄꺼임 */
     background-color: var(--color-dark-white);
     margin-left: -12px;
     margin-top: 8px;
+}
+
+
+            /*testimonial*/
+#testimonials{
+    background-color: var(--color-light-white);
+}
+.testimonials{
+    margin: 40px;
+}
+.testimonial{
+    display: flex;
+    margin: 20px;
+
+}
+.testimonial-avatar{
+     width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.testimonial-avatar:nth-child(odd){
+    margin-right: 40px;
+}
+.testimonial-avatar:nth-child(even){
+    margin-left: 40px;
+}
+.testimonial_speech-bubble{
+    background-color: var(--color-white);
+    padding: 20px;
+    border-radius: var(--size-border-radius)
+}
+.testimonial_speech-bubble p{
+    color: var(--color-light-grey);
+}
+.testimonial_speech-bubble a{
+    color: var(--color-pink);
+}
+
+            /*contact*/
+#contactMe{
+    background-color: var(--color-pink);
+}
+.contact__title, .contact__email, .contact__rights{
+    color: var(--color-white);
+}
+.contact__title{
+    margin: 32px 0;
+}
+.contact__links{
+    font-size: var(--font-large);
+    margin: 24px 0;
+    transition: all 350ms ease-in;
+}
+.contact__links a :hover{
+    transform: scale(1.5);
+    color: var(--color-light-blue);
 }
