@@ -28,13 +28,14 @@
     /*    size */
     --size-border-radius: 4px;
     /*    Universal tag*/
-    box-sizing: border-box
+    --box-sizing: border-box
     /*  even if i add padding, width and height of box will be same size.    */
 }
 body{
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     cursor: default;
+    box-sizing: var(--box-sizing);
 }
 
 a{
@@ -467,6 +468,5 @@ relative 로 바꿔 줄꺼임 */
         flex-direction: column;
         text-align: center;
         width: 100%;
-
     }
 }
