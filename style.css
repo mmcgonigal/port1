@@ -1,6 +1,8 @@
 /*global*/
 :root {
     /*    color*/
+
+    --color-dark-pink: #ff6863;
     --color-pink: #FF85B1;
     --color-dark-grey: #4d4d4d;
     --color-light-grey: #7c7979;
@@ -10,6 +12,8 @@
     --color-black: #000000;
     --color-orange: #feb546;
     --color-white: #ffffff;
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd;
     /*    font size*/
     --font-large: 48px;
     --font-medium: 28px;
@@ -51,7 +55,7 @@ h1{
     font-size: var(--font-large);
     font-weight: var(--weight-bold);
     color: var(--color-black);
-    margin: 16px 0px;
+    margin: 16px 0;
 }
 
 h2{
@@ -133,21 +137,29 @@ p{
 }
 
 /*section common*/
-.section{
+.section {
     padding: 50px;
     text-align: center;
+    margin: auto;
+}
+.section__container{
     max-width: 1200px;
     margin: auto;
+}
 /*max-width 를 1200 으로 맞췄을떄, text align 을 해도 한쪽으로 기울어 있는데,
 그건 마진이 오른쪽에만 있어서 그런거임, 이럴땐, margin: auto 를 해주면 마진이 양쪽으로
 분배가 되서, 컨텐츠가 한 가운데로 옴*/
-}
+                        /*about me*/
 .aboutMe-lists{
     display: flex;
     justify-content: space-between;
     margin: 80px 0;
-}
 
+}
+.aboutMe-list{
+    flex-basis: 33.3%
+/*    flexbox 의 정확한 3등분*/
+}
 .aboutMe-img{
     width: 170px;
     height: 170px;
@@ -173,7 +185,7 @@ p{
 }
 .aboutMe-img i{
     transition: all 300ms ease;
-/*  모든 속성값에 , 250ms ~ 350ms 이 가장 좋은 타이밍,   */
+/*  에니메이션 모든 속성값에 , 250ms ~ 350ms 이 가장 좋은 타이밍,   */
 }
 
 .aboutMe-list-title, .aboutMe-list-description{
@@ -201,6 +213,53 @@ p{
     font-size: var(--font-micro);
 }
 
+                    /*skill set*/
+#skill{
+    background-color: var(--color-yellow);
+}
 
+.skillset{
+    display: flex;
+    background-color: var(--color-light-grey);
+    color: var(--color-light-white);
+    margin: 20px 0;
+}
+.skillset-title{
+    color: var(--color-white);
+}
+.skillset-left{
+    flex-basis: 60%;
+    background-color: var(--color-dark-grey);
+    padding: 20px 40px;
+}
+.skill{
+    margin-bottom: 32px;
+}
+.skill__description{
+     display: flex;
+     justify-content: space-between;
+ }
+.skill__bar{
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-grey);
+}
+.skill__value{
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-orange);
 
+}
+.skillset-right{
+    flex-basis: 40%;
 
+}
+.tools{
+    background-color: var(--color-grey);
+}
+.tools, .etc{
+    padding: 20px;
+}
+.skillset__description li{
+    padding-bottom: 10px;
+}
