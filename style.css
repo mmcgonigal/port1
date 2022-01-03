@@ -38,8 +38,9 @@ body{
 a{
     text-decoration: none;
     color: var(--color-white);
-
 }
+
+
 ul{
     list-style: none;
     padding-left: 0;
@@ -149,6 +150,9 @@ p{
 /*max-width 를 1200 으로 맞췄을떄, text align 을 해도 한쪽으로 기울어 있는데,
 그건 마진이 오른쪽에만 있어서 그런거임, 이럴땐, margin: auto 를 해주면 마진이 양쪽으로
 분배가 되서, 컨텐츠가 한 가운데로 옴*/
+
+
+
                         /*about me*/
 .aboutMe-lists{
     display: flex;
@@ -262,4 +266,112 @@ p{
 }
 .skillset__description li{
     padding-bottom: 10px;
+}
+
+                /*work*/
+.category-btn{
+    border: 1px solid var(--color-dark-white);
+    border-radius: var(--size-border-radius);
+    font-size: var(--font-regular);
+    padding: 8px 48px;
+}
+.work__categories{
+    margin: 40px;
+}
+.category-btn.active,
+.category-btn:hover{
+    background-color: var(--color-pink);
+    color: var(--color-white)
+}
+/*category-btn 에 active 라는 클래스가 있거나, 마우스가 호버 할떄.*/
+.category-count{
+    background-color: var(--color-orange);
+    border-radius: 50%;
+    color: var(--color-white);
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+/*    display: inline-block 을 해주기 전엔, 숫자는 span 이라서
+필요한 공간만 쓰기 때문에, 타원형의 모습을 띔,
+이걸 바꿔주기 위해서, display 를 바로 inline-block 으로 바꿔주는 거임.*/
+    line-height: 24px;
+/*    숫자가 중간에 오지 않으므로 인라인 하잇을 컨테이너의 하잇에 맞춰줌,*/
+    margin-left: 5px;
+    position: relative;
+    top: -20px;
+    left: 4px;
+    opacity: 0;
+    transition: all 300ms ease;
+}
+.category-btn.active .category-count,
+.category-btn:hover .category-count{
+    opacity: 1;
+    top: 0;
+/*    top이 0으로 돌아 가는건, 위에 -20에서 제자리로 돌려주는것 */
+/*    버튼이 엑티브 하거나, 버튼에 마우스가 호버했을떄,
+카테고리 카운트의 에니메이션 이펙트. */
+}
+
+.work-projects{
+    display: flex;
+    flex-wrap: wrap;
+/*    화면 사이즈가 줄면, 자연스럽게 아래로 내려가게 됨.*/
+    justify-content: center;
+}
+.project-img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.project{
+    width: 250px;
+    height: 200px;
+    margin: 2px;
+    background-color: var(--color-light-white);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+.project-description{
+    position: absolute;
+/*    그냥 포지션 엡솔루트에 놓으면, position: static (default)가
+아닌 부모의 위치에서 지정된 값만큼 움직이므로, 지금 바디의 가장 위에 있음.*/
+/*    그렇기 때문에, 바로위 부모인, .project 를 static 이 아닌,
+relative 로 바꿔 줄꺼임 */
+/*    바로 위 프로젝트는 변하는게 없지만, 프로젝트 안에 담겨있는
+  프로젝트 디스크립션은, 프로젝트가 포지션이 스테틱이 아닌, 릴레이티브인걸
+  발견하고, 프로젝트 안에서 엡솔루트 포지션을 정하게 됨.
+ */
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: all 300ms ease;
+    transform: translateY(10px);
+}
+.project:hover .project-description{
+    /*project 에 마우스가 호버 됬을떄, 프로젝트 디스크립션이..*/
+    opacity: 0.8;
+    transform: translateY(0px);
+}
+.project-description h3{
+    color: var(--color-white);
+}
+
+.project-description h3:after{
+    content:"";
+    display: block;
+    position: relative;
+    left: 50%;
+    width: 25px;
+    height: 2px;
+    background-color: var(--color-dark-white);
+    margin-left: -12px;
+    margin-top: 8px;
 }
