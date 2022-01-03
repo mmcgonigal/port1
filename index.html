@@ -21,18 +21,24 @@
     <body>
 <!--        navbar-->
         <nav id="navbar" >
-            <nav class="leftNav">
-                <a href="#" target="_blank"><i class="fab fa-diaspora"></i>Mina</a>
-            </nav>
-            <nav class="rightNav">
-                <ul class="rightNav">
-                    <li><a class="rightNav-list__a" href="#About">About</a></li>
-                    <li><a class="rightNav-list__a" href="#Skills">Skills</a></li>
-                    <li><a class="rightNav-list__a" href="#MyWork">My work</a></li>
-                    <li><a class="rightNav-list__a" href="#Testimonial">Testimonial</a></li>
-                    <li><a class="rightNav-list__a" href="#Contact">Contact</a></li>
+            <div class="navbar__logo">
+                <i class="fab fa-diaspora"></i>
+                <a href="#" target="_blank">Mina</a>
+            </div>
+            <div class="navbar__menu">
+                <ul class="navbar__menu">
+                    <li><a class="navbar__menu__item active" href="#Home">Home</a></li>
+                    <li><a class="navbar__menu__item" href="#About">About</a></li>
+                    <li><a class="navbar__menu__item" href="#Skills">Skills</a></li>
+                    <li><a class="navbar__menu__item" href="#MyWork">My work</a></li>
+                    <li><a class="navbar__menu__item" href="#Testimonial">Testimonial</a></li>
+                    <li><a class="navbar__menu__item" href="#Contact">Contact</a></li>
                 </ul>
-            </nav>
+            </div>
+            <!-- toggle button   -->
+            <button class="navbar__toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
 
 <!--home-->
