@@ -28,9 +28,44 @@ console.log('3')
 setTimeout(()=>console.log('5'),2000);
 console.log('6');
 
-// Synchronous callback
+
+//synchronous call-back
 function printImmediately(print){
     print();
 }
+printImmediately(function(){
+    console.log('hello')
+})
 
- //asynchronous callback
+ //asynchronous call back
+ function printWithdelay(print, timeout){
+    setTimeout(print, timeout);
+ }
+ printWithdelay(()=>console.log(`async callback`),2000)
+
+
+
+ //callback hell example
+
+ class UserStorage{
+    loginUser(id, password, onSuccess, onError){
+        setTimeout(() =>{
+            if(
+                (id==='mina' && password==='rainbow')||
+                (id==='coder' && password ==='student')
+            ){onSuccess(id)
+            }else{
+                onError(new Error('not found')  )
+            }
+        }, 2000);
+    }
+    getRoles(user, onSuccess, onError){
+        setTimeout(()=>{
+        if(user==='mina'){
+            onSuccess({name:'mina', role:'admin'});
+        }else{
+            onError(new Error('no access'))
+        }
+    },1000)
+    }
+}
