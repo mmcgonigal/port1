@@ -37,7 +37,11 @@ body{
     cursor: default;
     box-sizing: var(--box-sizing);
 }
-
+.container{
+    width: 100%;
+    margin: 0;
+    border: 0;
+}
 a{
     text-decoration: none;
     color: var(--color-white);
@@ -489,5 +493,21 @@ relative 로 바꿔 줄꺼임 */
         width: 80px;
         height: 80px;
     }
-git
+    .testimonial{
+        display: block;
+        padding: 0;
+    }
+    #testimonials{
+        padding: 0;
+    }
+    .testimonial-2{
+        display : flex;
+        flex-direction: column-reverse;
+    }
+
+
+
+
+
+
 }
