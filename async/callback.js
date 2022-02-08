@@ -29,7 +29,7 @@ setTimeout(()=>console.log('5'),2000);
 console.log('6');
 
 
-//synchronous call-back
+//synchronous call-back 즉각적인,
 function printImmediately(print){
     print();
 }
@@ -37,15 +37,15 @@ printImmediately(function(){
     console.log('hello')
 })
 
- //asynchronous call back
- function printWithdelay(print, timeout){
+ //asynchronous call back // 나중에, 언제 실행 될지 모르는 아싱크로너스
+ function printWithDelay(print, timeout){
     setTimeout(print, timeout);
  }
- printWithdelay(()=>console.log(`async callback`),2000)
+ printWithDelay(()=>console.log(`async callback`),2000)
 
 
 
- //callback hell example
+ /////////////////////////////////////////callback hell example
 
  class UserStorage{
     loginUser(id, password, onSuccess, onError){
@@ -69,3 +69,25 @@ printImmediately(function(){
     },1000)
     }
 }
+const userStorage = new UserStorage();
+const id = prompt('enter your id')
+ const password = prompt('enter your password');
+userStorage.loginUser(
+    id,
+    password,
+    user=>{
+        userStorage.getRoles(
+            user,
+            userWithRoles=>{
+                alert(`${userWithRole.name}, you have a  ${userWithRole.role} role`
+                )
+            },
+            error =>{
+                console.log(error)
+            }
+        )
+    },
+    error=>{
+        console.log(error)
+    }
+)
